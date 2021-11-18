@@ -30,8 +30,8 @@ function OrderScreen({ match }) {
       
       dispatch(getOrderDetails(orderId))
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [order, orderId])
+
+  }, [dispatch, order, orderId])
 
 
 
