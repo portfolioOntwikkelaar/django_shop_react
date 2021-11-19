@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, {useState, useEffect} from 'react'
 
 import { Button, Row, Col, ListGroup, Image, Card } from 'react-bootstrap'
@@ -32,6 +33,7 @@ function PlaceOrderScreen({ history }) {
       history.push(`/order/${order._id}`)
       dispatch({ type: ORDER_CREATE_RESET })
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [success, history])
 
 
