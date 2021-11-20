@@ -33,6 +33,7 @@ function UserListScreen({history}) {
     } else {
       history.push('/login')
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, history, successDelete])
   return (
     <div>
@@ -64,7 +65,7 @@ function UserListScreen({history}) {
                   <i className='fas fa-check' style={{color: 'red'}}></i>
                 )}</td>
                 <td>
-                  <LinkContainer to={`/admin/user/${user._id}`}>
+                  <LinkContainer to={`/admin/user/${user._id}/edit`}>
                     <Button variant='light' className='btn-sm'>
                     <i className='fas fa-edit' ></i>
                     </Button>
