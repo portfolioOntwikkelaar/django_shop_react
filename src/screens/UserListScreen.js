@@ -18,12 +18,7 @@ function UserListScreen({history}) {
   const userDelete = useSelector(state => state.userDelete)
   const {success:successDelete} = userDelete
 
-  const deleteHandler = (id) => {
-    if(window.confirm('Are  you sure?')){
-
-      dispatch(deleteUser(id))
-    }
-  }
+  
 
   useEffect(() => {
     if(userInfo && userInfo.isAdmin){
@@ -34,7 +29,14 @@ function UserListScreen({history}) {
       history.push('/login')
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dispatch, history, successDelete])
+  }, [dispatch, history, successDelete, userInfo])
+
+  const deleteHandler = (id) => {
+    if(window.confirm('Are  you sure?')){
+
+      dispatch(deleteUser(id))
+    }
+  }
   return (
     <div>
       <h1>Users</h1>
