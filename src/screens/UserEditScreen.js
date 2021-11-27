@@ -8,7 +8,7 @@ import FormContainer from '../components/FormContainer'
 import { getUserDetails, updateUser } from '../actions/userActions'
 import { USER_UPDATE_RESET } from '../constants/userConstants'
 
-function EditUserScreen({match, history}) {
+function UserEditScreen({match, history}) {
   const userId = match.params.id
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -86,8 +86,10 @@ function EditUserScreen({match, history}) {
           >
           </Form.Control>
         </Form.Group>
-
-        <Form.Group controlId='isAdmin'>
+ 
+         <Form.Group controlId='isAdmin'>
+        {/* <Form.Group controlId='isadmin'> */}
+        
           
           <Form.Check
             type='checkbox'
@@ -111,4 +113,4 @@ function EditUserScreen({match, history}) {
   )
 }
 
-export default EditUserScreen
+export default UserEditScreen
